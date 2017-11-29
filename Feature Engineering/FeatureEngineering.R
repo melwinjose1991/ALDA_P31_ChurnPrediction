@@ -11,13 +11,13 @@ gc()
 ###### reading the csv files ######
 read_csv = "members"
 
-train_data = fread("data/train.csv")
-test_data = fread("data/sample_submission_zero.csv")
+train_data = fread("../data/train.csv")
+test_data = fread("../data/sample_submission_zero.csv")
 
 if(read_csv == "transactions"){
-  transactions_data = fread("data/transactions.csv")
+  transactions_data = fread("../data/transactions.csv")
 }else if(read_csv == "members"){
-  members_data = fread("data/members.csv")
+  members_data = fread("../data/members.csv")
 }
 
 
@@ -267,11 +267,11 @@ if(read_csv == "members"){
 
 ###### Write train and test ######
 head(FE_train)
-file_name = paste0("data/fe_train_", read_csv, ".csv")
+file_name = paste0("../data/fe_train_", read_csv, ".csv")
 write.table(FE_train, file_name, quote=FALSE, sep=",", row.names=FALSE)
 
 head(FE_test)
-file_name = paste0("data/fe_test_", read_csv, ".csv")
+file_name = paste0("../data/fe_test_", read_csv, ".csv")
 write.table(FE_test, file_name, quote=FALSE, sep=",", row.names=FALSE)
 
 

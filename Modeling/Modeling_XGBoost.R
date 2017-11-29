@@ -10,10 +10,10 @@ gc()
 
 
 ###### reading the csv files ######
-train_data = fread("traindata_final.csv")
+train_data = fread("../data/traindata_final.csv")
 setkey(train_data, msno)
 
-val_data = fread("testdata_final.csv")
+val_data = fread("../data/testdata_final.csv")
 setkey(val_data, msno)
 
 
@@ -71,5 +71,5 @@ val_pred = data.frame(msno=val_data$msno, is_churn=val_pred)
 head(train_pred)
 head(val_pred)
 
-write.csv(train_pred, "xgb_train_pred.csv", row.names = FALSE, quote=FALSE)
-write.csv(val_pred,   "xgb_val_pred.csv", row.names = FALSE, quote=FALSE)
+write.csv(train_pred, "../xgb_train_pred.csv", row.names = FALSE, quote=FALSE)
+write.csv(val_pred,   "../xgb_val_pred.csv", row.names = FALSE, quote=FALSE)

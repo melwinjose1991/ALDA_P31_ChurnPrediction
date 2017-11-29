@@ -11,8 +11,8 @@ gc()
 
 
 ###### reading the csv files ######
-eda_train_data = fread("data/train.csv")
-eda_members_data = fread("data/members.csv")
+eda_train_data = fread("../data/train.csv")
+eda_members_data = fread("../data/members.csv")
 
 head(eda_train_data)
 head(eda_members_data)

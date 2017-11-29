@@ -11,8 +11,8 @@ gc()
 
 
 ###### reading the csv files ######
-train = fread("data/fe_train_1.csv")
-test = fread("data/fe_test_1.csv")
+train = fread("../data/fe_train_1.csv")
+test = fread("../data/fe_test_1.csv")
 
 
 
