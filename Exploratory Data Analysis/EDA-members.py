@@ -80,3 +80,5 @@ city_crosstab.plot(kind='bar', stacked=True, grid=True)
 #checking city data relationship with churn
 registered_via_crosstab=pd.crosstab(trainingData['registered_via'],trainingData['is_churn'])
 registered_via_crosstab.plot(kind='bar', stacked=True, grid=True)
+
+trainingData.to_csv('MembersProc_file.csv', sep=',')
