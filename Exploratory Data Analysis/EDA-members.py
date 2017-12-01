@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Nov  2 23:43:36 2017
-
 @author: SACHIN
 """
 import pandas as pd
@@ -36,7 +34,7 @@ transformType(memberdata)
 #merging members data file with training file on msno parameter
 trainingData=pd.merge(left=traindata,right=memberdata,how='left',on='msno')   
 
-#deleting varaible not in use to free some memory
+#deleting variable not in use to free some memory
 del memberdata
 del traindata
 
